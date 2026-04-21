@@ -18,5 +18,10 @@ const router = express.Router();
 // et appelle la fonction registerView du contrôleur pour afficher la page d'inscription
 router.get("/register", authentificationController.registerView);
 
+// Définition de la route GET "/login" pour afficher la page de connexion
+router.get("/login", authentificationController.loginView);
+
+router.post("/register", authentificationController.registerUser);
+
 // Exportation du routeur pour qu'il soit importé et monté dans app.js via app.use()
 module.exports = router;

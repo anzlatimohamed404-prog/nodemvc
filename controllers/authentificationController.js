@@ -9,5 +9,16 @@ module.exports = {
     // La vue register
     registerView: (req, res) => {
         res.render("register");
+    },
+
+    // La vue login
+    loginView: (req, res) => {
+        res.render("login");
+    },
+
+    // je crée une Méthode asynchrome (async)
+    registerUser: async (req, res) => {
+        console.log("###Controller RegisterUser**");
+        console.log("### Controller - req : ", req.body);
     }
 }
