@@ -94,6 +94,21 @@
                 <label for="password">Mot de passe:</label>
                 <input type="password" id="password" name="password" required>
             </div>
+
+            <!-- Affichage du message d'erreur si l'utilisateur n'a pas de compte ou mauvais mot de passe -->
+            <% if (error) { %>
+                <div style="
+                    background: #ffe0e0;
+                    color: #c0392b;
+                    padding: 10px 15px;
+                    border-radius: 5px;
+                    margin-bottom: 15px;
+                    font-size: 14px;
+                    text-align: center;
+                ">
+                    <%= error %>
+                </div>
+            <% } %>
             
             <button type="submit" class="btn-submit">Se connecter</button>
         </form>
